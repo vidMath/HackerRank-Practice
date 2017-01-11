@@ -1,0 +1,1 @@
+select * from ( (select min(city),length(city) from station where length(city) = (select min(length(city)) from station as l1)) union (select max(city),length(city) from station where length(city) = (select max(length(city)) from station as l2))) as l3
